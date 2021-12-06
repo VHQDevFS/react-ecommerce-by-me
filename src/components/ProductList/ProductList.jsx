@@ -26,13 +26,13 @@ const ProductList = () => {
               <li onClick={() => handleClickToSort('asc')}>
                 <div>
                   <input type="radio" id="asc" name="sort" />
-                  <label for="asc">Newest products</label>
+                  <label htmlFor="asc">Newest products</label>
                 </div>
               </li>
               <li onClick={() => handleClickToSort('desc')}>
                 <div>
                   <input type="radio" id="desc" name="sort" />
-                  <label for="desc">Oldest products</label>
+                  <label htmlFor="desc">Oldest products</label>
                 </div>
               </li>
             </ul>

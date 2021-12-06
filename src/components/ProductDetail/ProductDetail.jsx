@@ -26,13 +26,14 @@ const ProductDetail = () => {
   const navigate = useNavigate()
   const handleAddToCart = () => {
     navigate('/cart')
+    console.log(productId)
     dispatch(
       addToCart({
         title,
         price,
         category,
         image,
-        id: productId,
+        id: Number(productId),
         quantity
       })
     )

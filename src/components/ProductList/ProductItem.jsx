@@ -11,6 +11,7 @@ const ProductItem = ({ image, price, title, rate, id, category }) => {
   const dispatch = useDispatch()
   const handleAddToCart = () => {
     toast.success('Added to the cart')
+    console.log('id: ', id)
 
     dispatch(
       addToCart({

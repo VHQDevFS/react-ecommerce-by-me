@@ -9,6 +9,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
+      console.log("action: ", action.payload);
       const isProductInCart =
         state.cartProducts.length >= 0 && state.cartProducts.find(el => el.id === action.payload.id)
       if (!isProductInCart) state.cartProducts.push(action.payload)
