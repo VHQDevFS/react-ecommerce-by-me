@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts, getProductsSort } from '../../Redux/products/productsSlice'
 import Loading from '../Loading/Loading'
@@ -7,8 +7,6 @@ import ProductItem from './ProductItem'
 
 const ProductList = () => {
   const { allProducts, loading } = useSelector(state => state.products)
-
-  const [sortState, setSortState] = useState(null)
   const dispatch = useDispatch()
 
   useEffect(() => {
