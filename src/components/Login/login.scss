@@ -1,0 +1,95 @@
+@import '../../sass/grid.scss';
+
+.login {
+  margin: 2rem 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {font-size: 2rem;}
+    
+
+    span.dot {
+      display: inline-block;
+      width: 0.6rem;
+      height: 0.6rem;
+
+      background-color: #000;
+      position: relative;
+      margin-right: 0.7rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border: 1px solid #000;
+        margin: -0.2rem;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &-form {
+    margin: 1rem;
+
+    label {
+      font-size: 1.6rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 1.5rem 2rem;
+      width: 100%;
+      height: 4.5rem;
+      background-color: #f5f5f5;
+
+      font-size: 1.4rem;
+      line-height: normal;
+
+      border: none;
+      outline: 0;
+      border-radius: 2px;
+
+      margin-bottom: 2rem;
+
+      &:focus {
+        border: 1px solid #000;
+      }
+    }
+  }
+
+  &__right {
+    h4,
+    p {
+      margin: 2rem 0;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}

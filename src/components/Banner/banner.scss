@@ -1,0 +1,63 @@
+@import '../../sass/global.scss';
+
+.banner {
+  background-image: url('https://novine-react.envytheme.com/_next/static/media/main-banner1.ba2256865242c4e3512ada54c86803a0.jpg');
+  height: 600px;
+  background-color: #f1f1f1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  position: relative;
+  z-index: 1;
+  height: 60rem;
+
+  margin-bottom: 5rem;
+
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+
+    @include mobile {
+      left: 5%;
+    }
+
+    span,
+    h1,
+    p,
+    .btn-group {
+      margin-top: 1rem;
+    }
+
+    span {
+      color: $txt-light-color;
+      font-size: 1.4rem;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: #222;
+      margin-bottom: 3rem;
+    }
+
+    .btn-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn__item {
+      margin-right: 1rem;
+    }
+  }
+
+  @include mobile {
+    background: #f1f1f1;
+  }
+}
