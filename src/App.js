@@ -6,11 +6,9 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import ProductDetail from './pages/ProductDetailPage'
 
-
 function App() {
-    return (
+  return (
     <Router>
-      {/* {!user && <Navigate to="/login" />} */}
       <div className="app">
         <Routes>
           <Route path="/" element={<HomePage />} />

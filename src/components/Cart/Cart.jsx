@@ -5,6 +5,8 @@ import Button from '../Button/Button'
 import CartItem from './CartItem'
 
 const Cart = () => {
+  const navigate = useNavigate()
+
   const { cartProducts } = useSelector(state => state.carts)
   const [subTotal, setSubtotal] = useState(0)
 
@@ -16,7 +18,7 @@ const Cart = () => {
     if (subTotal) setSubtotal(subTotal.toFixed(2))
     else setSubtotal(0)
   }, [cartProducts])
-  const navigate = useNavigate()
+
   return (
     <div className="cart">
       <div className="grid wide">
@@ -41,6 +43,7 @@ const Cart = () => {
               cartProducts.length > 0 &&
               cartProducts.map(cartProduct => <CartItem key={cartProduct.id} item={cartProduct} />)}
           </div>
+
           <div className="col l-4 m-12 c-12">
             <div className="checkout">
               <h1>ORDER SUMMARY</h1>

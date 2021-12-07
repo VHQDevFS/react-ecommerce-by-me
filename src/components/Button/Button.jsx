@@ -1,9 +1,9 @@
-
 const Button = props => {
   const color = props.color === 'light' ? 'btn__light' : 'btn__dark'
   const style = {
     width: props?.wFull ? '100%' : ''
   }
+
   return (
     <button
       type={props?.type ? `${props.type}` : 'text'}

@@ -1,5 +1,3 @@
-
-
 const FacilityItem = ({ name, icon }) => {
   return (
     <div className="col l-3 m-6 c-12">

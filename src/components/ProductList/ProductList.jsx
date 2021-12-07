@@ -6,8 +6,10 @@ import Loading from '../Loading/Loading'
 import ProductItem from './ProductItem'
 
 const ProductList = () => {
-  const { allProducts, loading } = useSelector(state => state.products)
   const dispatch = useDispatch()
+
+  const { allProducts, loading } = useSelector(state => state.products)
+
   useEffect(() => {
     dispatch(getProducts())
     return () => {

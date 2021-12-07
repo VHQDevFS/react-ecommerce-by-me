@@ -1,5 +1,3 @@
-// @import '../../sass/grid.scss';
-
 .login {
   margin: 2rem 0;
 
@@ -8,8 +6,9 @@
     align-items: center;
     justify-content: center;
 
-    span {font-size: 2rem;}
-    
+    span {
+      font-size: 2rem;
+    }
 
     span.dot {
       display: inline-block;

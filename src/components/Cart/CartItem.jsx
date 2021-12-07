@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import { deleteCartItem, updateQuantity } from '../../Redux/Cart/cartSlice'
 import Button from '../Button/Button'
 
-
 const CartItem = ({ item }) => {
   const [itemCart, setCartItem] = useState(item)
   const [quantityValue, setQuantityValue] = useState(item.quantity)

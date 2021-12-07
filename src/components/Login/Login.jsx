@@ -4,11 +4,12 @@ import { authLogin } from '../../Redux/auth/authSlice'
 import Button from '../Button/Button'
 
 const Login = () => {
+  const dispatch = useDispatch()
+
   const [loginForm, setLoginForm] = useState({
     username: '',
     password: ''
   })
-  const dispatch = useDispatch()
 
   const onChangeLoginForm = e => {
     let name = e.target.name
@@ -20,7 +21,6 @@ const Login = () => {
     e.preventDefault()
     dispatch(authLogin(loginForm))
   }
-
 
   return (
     <div className="login">

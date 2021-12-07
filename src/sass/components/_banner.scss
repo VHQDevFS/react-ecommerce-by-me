@@ -1,27 +1,81 @@
-// @import '../../sass/global.scss';
-
 .banner {
-  background-image: url('https://novine-react.envytheme.com/_next/static/media/main-banner1.ba2256865242c4e3512ada54c86803a0.jpg');
-  height: 600px;
-  background-color: #f1f1f1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-
   position: relative;
   z-index: 1;
-  height: 60rem;
 
   margin-bottom: 5rem;
+  min-height: 36rem;
+
+  // swiper slide
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    min-height: 36rem;
+    object-fit: contain;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &-content {
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 15%;
     transform: translateY(-50%);
 
+    z-index: 9;
+    width: 70%;
+
+    
+
     @include mobile {
-      left: 5%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      text-align: center;
     }
 
     span,
@@ -32,19 +86,30 @@
 
     span {
       display: inline-block;
-      color: $txt-light-color;
+      color: inherit;
       font-size: 1.4rem;
+
+      @include mobile {
+        font-size: 1rem;
+      }
     }
 
     h1 {
       font-size: 3.4rem;
-      font-weight: 700;
+      font-weight: bold;
+      text-transform: uppercase;
+      @include mobile {
+        font-size: 1.6rem;
+      }
     }
 
     p {
       font-size: 1.8rem;
-      color: #222;
       margin-bottom: 3rem;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 

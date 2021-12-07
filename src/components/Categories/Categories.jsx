@@ -1,5 +1,5 @@
-
 import CategoryItem from './CategoryItem'
+
 const Categories = () => {
   return (
     <div className="categories">

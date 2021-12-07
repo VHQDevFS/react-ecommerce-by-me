@@ -1,29 +1,31 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/img/logo.png'
 
-const Navbar = () => {
-  // sticky navbar
-  useEffect(() => {
-    const stickyNavbar = () => {
-      const topBorder = document.body.getBoundingClientRect().top
-
-      topBorder >= 0 && topBorder !== null
-        ? document.querySelector('.header').classList.remove('fixed')
-        : document.querySelector('.header').classList.add('fixed')
-    }
-    window.addEventListener('scroll', stickyNavbar)
-    return () => {
-      window.removeEventListener('scroll', stickyNavbar)
-    }
-  }, [])
+const Navbar = ({ disableFixed }) => {
   const { cartProducts } = useSelector(state => state.carts)
 
   const totalProducts = cartProducts && cartProducts.length > 0 ? cartProducts.length : 0
 
+  const [stickyClass, setStickyClass] = useState('')
+
+  useEffect(() => {
+    const stickNavbar = () => {
+      if (window !== undefined) {
+        const windowHeight = window.scrollY
+        // window height
+        windowHeight > 150 ? setStickyClass('fixed') : setStickyClass('')
+      }
+    }
+    if (!disableFixed) window.addEventListener('scroll', stickNavbar)
+
+    return () => {
+      if (!disableFixed) window.removeEventListener('scroll', stickNavbar)
+    }
+  }, [disableFixed])
   return (
-    <nav className="header">
+    <nav className={`header ${stickyClass}`}>
       <div className="logo">
         <Link to="/">
           <img className="logo__img" src={logo} alt="logo" />

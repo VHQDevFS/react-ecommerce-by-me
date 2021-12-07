@@ -6,9 +6,9 @@ import { addToCart } from '../../Redux/Cart/cartSlice'
 import Button from '../Button/Button'
 import StarRating from '../StarRating/StarRating'
 
-
 const ProductItem = ({ image, price, title, rate, id, category }) => {
   const dispatch = useDispatch()
+
   const handleAddToCart = () => {
     toast.success('Added to the cart')
 
@@ -23,6 +23,7 @@ const ProductItem = ({ image, price, title, rate, id, category }) => {
       })
     )
   }
+  
   return (
     <>
       <div className="col l-3 m-6 c-6">

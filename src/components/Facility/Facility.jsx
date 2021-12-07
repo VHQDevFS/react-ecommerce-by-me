@@ -1,4 +1,3 @@
-
 import FacilityItem from './FacilityItem'
 
 const Facility = () => {
@@ -21,12 +20,13 @@ const Facility = () => {
       icon: 'fas fa-headset'
     }
   ]
+
   return (
     <div className="facility">
       <div className="grid">
         <div className="row">
           {data.map(item => (
-            <FacilityItem key={item.name} name={item.name} icon ={item.icon} />
+            <FacilityItem key={item.name} name={item.name} icon={item.icon} />
           ))}
         </div>
       </div>

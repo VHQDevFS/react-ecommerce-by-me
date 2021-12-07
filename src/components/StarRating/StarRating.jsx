@@ -1,5 +1,3 @@
-
-
 const StarRating = ({ rate }) => {
   return (
     <div className="star-rating">

@@ -6,10 +6,10 @@ import ProductDetail from '../components/ProductDetail/ProductDetail'
 const ProductDetailPage = () => {
   return (
     <>
-    <Navbar/>
-    <ProductDetail/>
-    <Facility/>
-    <Footer/>
+      <Navbar />
+      <ProductDetail />
+      <Facility />
+      <Footer />
     </>
   )
 }

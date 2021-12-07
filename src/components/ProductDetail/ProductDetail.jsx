@@ -8,22 +8,23 @@ import Button from '../Button/Button'
 import Loading from '../Loading/Loading'
 import StarRating from '../StarRating/StarRating'
 
-
 const ProductDetail = () => {
   const { productId } = useParams()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
   const { product, loading } = useSelector(state => state.products)
   const { title, price, category, description, image, rating } = product
 
   const [quantity, handleIncrement, handleDecrement] = useQuantity(1)
-
-  const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getProductDetail(productId))
+    
     return () => {
       dispatch(removeProductSelected())
     }
   }, [dispatch, productId])
-  const navigate = useNavigate()
+
   const handleAddToCart = () => {
     navigate('/cart')
     console.log(productId)

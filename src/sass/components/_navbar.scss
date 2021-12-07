@@ -1,17 +1,45 @@
-// @import '../../sass/global.scss';
+.fixed {
+  padding: 0 10.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
 
-// @import '../../sass/grid.scss';
+  transition: all 0.2s ease;
+  @include mobile {
+    padding: 0 3%;
+  }
 
+  // transition: all 0.3s ease;
+  animation: fadeInDown 0.5s ease-in-out 0s 1 normal none running;
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 .header {
-  height: 5rem;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
+  height: 6rem;
+  width: 100%;
   padding: 3rem 10.5%;
 
   @include mobile {
-    padding: 2rem 2%;
+    padding: 1rem 1%;
   }
 
   .options {
@@ -19,10 +47,12 @@
     align-items: center;
 
     &__item {
+      color: $txt-color;
+
       margin-left: 1.7rem;
       position: relative;
+
       cursor: pointer;
-      color: $txt-color;
 
       &:not(:first-child):before {
         content: '';
