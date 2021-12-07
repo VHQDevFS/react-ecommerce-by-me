@@ -1,16 +1,18 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getProducts, getProductsSort } from '../../Redux/products/productsSlice'
+import { getProducts, getProductsSort, removeProductList } from '../../Redux/products/productsSlice'
 import Loading from '../Loading/Loading'
-import './product-list.scss'
+
 import ProductItem from './ProductItem'
 
 const ProductList = () => {
   const { allProducts, loading } = useSelector(state => state.products)
   const dispatch = useDispatch()
-
   useEffect(() => {
     dispatch(getProducts())
+    return () => {
+      dispatch(removeProductList())
+    }
   }, [dispatch])
 
   const handleClickToSort = sortBy => {

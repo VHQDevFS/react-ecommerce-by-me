@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/img/logo.png'
-import './navbar.scss'
+
 const Navbar = () => {
   // sticky navbar
   useEffect(() => {

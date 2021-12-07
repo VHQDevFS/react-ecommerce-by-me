@@ -7,7 +7,7 @@ import { getProductDetail, removeProductSelected } from '../../Redux/products/pr
 import Button from '../Button/Button'
 import Loading from '../Loading/Loading'
 import StarRating from '../StarRating/StarRating'
-import './product-detail.scss'
+
 
 const ProductDetail = () => {
   const { productId } = useParams()

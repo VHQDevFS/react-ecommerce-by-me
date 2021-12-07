@@ -1,4 +1,4 @@
-import './button.scss'
+
 const Button = props => {
   const color = props.color === 'light' ? 'btn__light' : 'btn__dark'
   const style = {

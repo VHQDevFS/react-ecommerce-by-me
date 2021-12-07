@@ -1,0 +1,106 @@
+// @import '../../sass//global.scss';
+.product-detail {
+  margin: 1rem 0;
+
+  // max-height: 70rem;
+  overflow: hidden;
+
+  .product__img {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img {
+      height: 40rem;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    &__title {
+      font-size: 2.2rem;
+    }
+    &__title,
+    &__category,
+    &__price,
+    &__description,
+    &__rating {
+      margin-bottom: 0.8rem;
+    }
+    &__category {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+    }
+
+    &__price {
+      display: inline-block;
+      font-size: 1.8rem;
+    }
+
+    &__rating {
+      display: flex;
+      align-items: center;
+
+      h6 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        border-bottom: 1px solid #000;
+        margin-left: 0.8rem;
+      }
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      color: $txt-light-color;
+    }
+
+    &__quantity {
+      display: flex;
+      align-items: center;
+
+      .quantity {
+        background-color: #f8f8f8;
+        margin-right: 1rem;
+
+        &__btn {
+          outline: 0;
+          border: none;
+          font-size: 1.6rem;
+          i {
+            opacity: 0.6;
+            transition: all 0.5 ease;
+            cursor: pointer;
+          }
+
+          &:hover {
+            i {
+              opacity: 1;
+            }
+          }
+        }
+
+        &__btn,
+        .quantity__number {
+          padding: 1.3rem;
+          font-size: 1.6rem;
+          width: 5rem;
+          text-align: center;
+        }
+        .quantity__number {
+          display: inline-block;
+          font-weight: bold;
+        }
+      }
+      i.icon {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .loading {
+    width: 100%;
+    text-align: center;
+  }
+}

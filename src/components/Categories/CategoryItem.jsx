@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { getProductByCategory } from '../../Redux/products/productsSlice'
-import './categories.scss'
+
 
 const CategoryItem = ({ category, image }) => {
   const dispatch = useDispatch()

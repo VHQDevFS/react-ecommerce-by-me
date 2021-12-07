@@ -26,12 +26,12 @@
 
     span,
     h1,
-    p,
-    .btn-group {
+    p {
       margin-top: 1rem;
     }
 
     span {
+      display: inline-block;
       color: $txt-light-color;
       font-size: 1.4rem;
     }
@@ -45,15 +45,6 @@
       font-size: 1.8rem;
       color: #222;
       margin-bottom: 3rem;
-    }
-
-    .btn-group {
-      display: flex;
-      align-items: center;
-    }
-
-    .btn__item {
-      margin-right: 1rem;
     }
   }
 

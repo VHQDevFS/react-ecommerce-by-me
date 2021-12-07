@@ -1,7 +1,27 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { authLogin } from '../../Redux/auth/authSlice'
 import Button from '../Button/Button'
-import './login.scss'
 
 const Login = () => {
+  const [loginForm, setLoginForm] = useState({
+    username: '',
+    password: ''
+  })
+  const dispatch = useDispatch()
+
+  const onChangeLoginForm = e => {
+    let name = e.target.name
+    let value = e.target.value
+    setLoginForm({ ...loginForm, [name]: value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    dispatch(authLogin(loginForm))
+  }
+
+
   return (
     <div className="login">
       <div className="grid wide">
@@ -12,13 +32,14 @@ const Login = () => {
                 <span className="dot"></span>
                 <span>Login</span>
               </h3>
-              <form className="login-form" autoComplete="off">
+              <form className="login-form" autoComplete="off" onSubmit={handleSubmit}>
                 <label htmlFor="username">USERNAME</label>
                 <input
                   type="text"
                   name="username"
                   id="username"
                   placeholder="Enter your username"
+                  onChange={onChangeLoginForm}
                 />
 
                 <label htmlFor="password">PASSWORD</label>
@@ -27,6 +48,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Enter your password"
+                  onChange={onChangeLoginForm}
                 />
 
                 <Button children="login" type="submit" />

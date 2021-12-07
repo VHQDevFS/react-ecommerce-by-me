@@ -1,0 +1,29 @@
+$txt-color: #212529;
+$txt-light-color: #666;
+
+// responsive
+
+//mobile
+$width-mobile: 768px;
+
+//mobile
+@mixin mobile {
+  @media (max-width: #{$width-mobile}) {
+    @content;
+  }
+}
+
+//tablet
+@mixin tablet {
+  @media (min-width: 740px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+//tablet -> PC low resolution
+
+@mixin low-resolution {
+  @media (min-width: 740px) and (max-width: 1023px) {
+    @content;
+  }
+}

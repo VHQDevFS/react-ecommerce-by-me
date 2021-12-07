@@ -1,4 +1,4 @@
-import './footer.scss'
+
 import logo from '../../assets/img/logo.png'
 const Footer = () => {
   return (

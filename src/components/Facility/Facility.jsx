@@ -1,4 +1,4 @@
-import './facility.scss'
+
 import FacilityItem from './FacilityItem'
 
 const Facility = () => {

@@ -1,4 +1,4 @@
-import './StarRating.scss'
+
 
 const StarRating = ({ rate }) => {
   return (

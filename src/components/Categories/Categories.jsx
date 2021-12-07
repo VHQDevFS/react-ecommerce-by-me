@@ -1,4 +1,4 @@
-import './categories.scss'
+
 import CategoryItem from './CategoryItem'
 const Categories = () => {
   return (

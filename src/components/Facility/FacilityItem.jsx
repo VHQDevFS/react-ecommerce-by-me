@@ -1,4 +1,4 @@
-import './facility.scss'
+
 
 const FacilityItem = ({ name, icon }) => {
   return (

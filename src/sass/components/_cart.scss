@@ -1,0 +1,48 @@
+// @import '../../sass/global.scss';
+
+.cart {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    button {
+      display: block;
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .checkout {
+    margin-top: 2rem;
+    padding: 2rem;
+
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    color: $txt-color;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    .text {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
+      font-size: 2rem;
+    }
+    .total {
+      span {
+        font-weight: 500;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+
